@@ -20,7 +20,7 @@ We're not really ready to work on this section yet. We're still focused on writi
 [Grace]: ./characters.md#grace-the-principal-engineer-hacking-on-a-data-storage-service
 [Niklaus]: ./characters.md#niklaus-the-developer-building-generic-rust-libraries-and-frameworks
 [Barbara]: ./characters.md#barbara-embedded-developer-doing-networking
-[Volunteer wanted]: ./how_to_vision_doc.md#how-can-i-finish-or-add-a-section-to-the-document
+[Volunteer wanted]: ./how_to_vision.md#how-can-i-finish-or-add-a-section-to-the-document
 
 ## Shiny future stories
 
