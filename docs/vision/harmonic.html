@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>🎼  Harmonic Synthesis - wg-async-foundations</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="../skill-tree.css">
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../welcome.html"><strong aria-hidden="true">1.</strong> 👋🏽 Welcome</a></li><li class="chapter-item expanded "><a href="../vision.html"><strong aria-hidden="true">2.</strong> 🔮 The vision</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../vision/how_to_vision.html"><strong aria-hidden="true">2.1.</strong> ❓How to vision</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../vision/how_to_vision/projects.html"><strong aria-hidden="true">2.1.1.</strong> Projects</a></li><li class="chapter-item "><a href="../vision/how_to_vision/status_quo.html"><strong aria-hidden="true">2.1.2.</strong> &quot;Status quo&quot; stories</a></li><li class="chapter-item "><a href="../vision/how_to_vision/shiny_future.html"><strong aria-hidden="true">2.1.3.</strong> &quot;Shiny future&quot; stories</a></li><li class="chapter-item "><a href="../vision/how_to_vision/comment.html"><strong aria-hidden="true">2.1.4.</strong> Commenting</a></li><li class="chapter-item "><a href="../vision/how_to_vision/awards.html"><strong aria-hidden="true">2.1.5.</strong> Awards</a></li></ol></li><li class="chapter-item "><a href="../vision/tenets.html"><strong aria-hidden="true">2.2.</strong> ✏️ Design tenets for async</a></li><li class="chapter-item "><a href="../vision/characters.html"><strong aria-hidden="true">2.3.</strong> 🙋‍♀️ Cast of characters</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../vision/characters/alan.html"><strong aria-hidden="true">2.3.1.</strong> Alan</a></li><li class="chapter-item "><a href="../vision/characters/grace.html"><strong aria-hidden="true">2.3.2.</strong> Grace</a></li><li class="chapter-item "><a href="../vision/characters/niklaus.html"><strong aria-hidden="true">2.3.3.</strong> Niklaus</a></li><li class="chapter-item "><a href="../vision/characters/barbara.html"><strong aria-hidden="true">2.3.4.</strong> Barbara</a></li></ol></li><li class="chapter-item "><a href="../vision/projects.html"><strong aria-hidden="true">2.4.</strong> ⚡ Projects</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../vision/projects/template.html"><strong aria-hidden="true">2.4.1.</strong> Template</a></li><li class="chapter-item "><a href="../vision/projects/MonsterMesh.html"><strong aria-hidden="true">2.4.2.</strong> MonsterMesh (embedded sensors)</a></li><li class="chapter-item "><a href="../vision/projects/DistriData.html"><strong aria-hidden="true">2.4.3.</strong> DistriData (Generic Infrastructure)</a></li><li class="chapter-item "><a href="../vision/projects/TrafficMonitor.html"><strong aria-hidden="true">2.4.4.</strong> TrafficMonitor (Custom Infrastructure)</a></li><li class="chapter-item "><a href="../vision/projects/YouBuy.html"><strong aria-hidden="true">2.4.5.</strong> YouBuy (Traditional Server Application)</a></li><li class="chapter-item "><a href="../vision/projects/SLOW.html"><strong aria-hidden="true">2.4.6.</strong> SLOW (Protocol implementation)</a></li></ol></li><li class="chapter-item "><a href="../vision/status_quo.html"><strong aria-hidden="true">2.5.</strong> 😱 Status quo</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../vision/status_quo/template.html"><strong aria-hidden="true">2.5.1.</strong> Template</a></li><li class="chapter-item "><a href="../vision/status_quo/alan_builds_a_cache.html"><strong aria-hidden="true">2.5.2.</strong> Alan tries to cache requests, which doesn't always happen</a></li><li class="chapter-item "><a href="../vision/status_quo/alan_finds_database_drops_hard.html"><strong aria-hidden="true">2.5.3.</strong> Alan finds dropping database handles is hard</a></li><li class="chapter-item "><a href="../vision/status_quo/alan_has_an_event_loop.html"><strong aria-hidden="true">2.5.4.</strong> Alan has an external event loop</a></li><li class="chapter-item "><a href="../vision/status_quo/alan_hates_writing_a_stream.html"><strong aria-hidden="true">2.5.5.</strong> Alan hates writing a Stream</a></li><li class="chapter-item "><a href="../vision/status_quo/alan_iteratively_regresses.html"><strong aria-hidden="true">2.5.6.</strong> Alan iteratively regresses performance</a></li><li class="chapter-item "><a href="../vision/status_quo/alan_lost_the_world.html"><strong aria-hidden="true">2.5.7.</strong> Alan lost the world</a></li><li class="chapter-item "><a href="../vision/status_quo/alan_needs_async_in_traits.html"><strong aria-hidden="true">2.5.8.</strong> Alan needs async in traits</a></li><li class="chapter-item "><a href="../vision/status_quo/alan_picks_web_server.html"><strong aria-hidden="true">2.5.9.</strong> Alan wants to migrate a web server to Rust</a></li><li class="chapter-item "><a href="../vision/status_quo/alan_runs_into_stack_trouble.html"><strong aria-hidden="true">2.5.10.</strong> Alan runs into stack trouble</a></li><li class="chapter-item "><a href="../vision/status_quo/alan_started_trusting_the_rust_compiler_but_then_async.html"><strong aria-hidden="true">2.5.11.</strong> Alan started trusting the Rust compiler, but then... async</a></li><li class="chapter-item "><a href="../vision/status_quo/alan_thinks_he_needs_async_locks.html"><strong aria-hidden="true">2.5.12.</strong> Alan thinks he needs async locks</a></li><li class="chapter-item "><a href="../vision/status_quo/alan_tries_a_socket_sink.html"><strong aria-hidden="true">2.5.13.</strong> Alan tries using a socket Sink</a></li><li class="chapter-item "><a href="../vision/status_quo/alan_tries_to_debug_a_hang.html"><strong aria-hidden="true">2.5.14.</strong> Alan tries to debug a hang</a></li><li class="chapter-item "><a href="../vision/status_quo/alan_writes_a_web_framework.html"><strong aria-hidden="true">2.5.15.</strong> Alan writes a web framework</a></li><li class="chapter-item "><a href="../vision/status_quo/aws_engineer.html"><strong aria-hidden="true">2.5.16.</strong> Alan extends an AWS service</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../vision/status_quo/aws_engineer/writing_a_java_based_service.html"><strong aria-hidden="true">2.5.16.1.</strong> Writing a Java-based service at AWS</a></li><li class="chapter-item "><a href="../vision/status_quo/aws_engineer/getting_started_with_rust.html"><strong aria-hidden="true">2.5.16.2.</strong> Getting started with Rust</a></li><li class="chapter-item "><a href="../vision/status_quo/aws_engineer/coming_from_java.html"><strong aria-hidden="true">2.5.16.3.</strong> Coming from Java</a></li><li class="chapter-item "><a href="../vision/status_quo/aws_engineer/ecosystem.html"><strong aria-hidden="true">2.5.16.4.</strong> Exploring the ecosystem</a></li><li class="chapter-item "><a href="../vision/status_quo/aws_engineer/juggling_error_handling.html"><strong aria-hidden="true">2.5.16.5.</strong> Juggling error handling</a></li><li class="chapter-item "><a href="../vision/status_quo/aws_engineer/failure_to_parallelize.html"><strong aria-hidden="true">2.5.16.6.</strong> Failure to parallelize</a></li><li class="chapter-item "><a href="../vision/status_quo/aws_engineer/borrow_check_errors.html"><strong aria-hidden="true">2.5.16.7.</strong> Borrow check errors</a></li><li class="chapter-item "><a href="../vision/status_quo/aws_engineer/encountering_pin.html"><strong aria-hidden="true">2.5.16.8.</strong> Encoutering pin</a></li><li class="chapter-item "><a href="../vision/status_quo/aws_engineer/figuring_out_the_best_option.html"><strong aria-hidden="true">2.5.16.9.</strong> Figuring out the best option</a></li><li class="chapter-item "><a href="../vision/status_quo/aws_engineer/testing_the_service.html"><strong aria-hidden="true">2.5.16.10.</strong> Testing his service</a></li><li class="chapter-item "><a href="../vision/status_quo/aws_engineer/missed_waker_leads_to_lost_performance.html"><strong aria-hidden="true">2.5.16.11.</strong> Missed Waker leads to lost performance</a></li><li class="chapter-item "><a href="../vision/status_quo/aws_engineer/debugging_performance_problems.html"><strong aria-hidden="true">2.5.16.12.</strong> Debugging performance problems</a></li><li class="chapter-item "><a href="../vision/status_quo/aws_engineer/using_jni.html"><strong aria-hidden="true">2.5.16.13.</strong> Using JNI</a></li></ol></li><li class="chapter-item "><a href="../vision/status_quo/barbara_anguishes_over_http.html"><strong aria-hidden="true">2.5.17.</strong> Barbara anguishes over HTTP</a></li><li class="chapter-item "><a href="../vision/status_quo/barbara_battles_buffered_streams.html"><strong aria-hidden="true">2.5.18.</strong> Barbara battles buffered streams</a></li><li class="chapter-item "><a href="../vision/status_quo/barbara_bridges_sync_and_async.html"><strong aria-hidden="true">2.5.19.</strong> Barbara bridges sync and async in perf.rust-lang.org</a></li><li class="chapter-item "><a href="../vision/status_quo/barbara_builds_an_async_executor.html"><strong aria-hidden="true">2.5.20.</strong> Barbara builds an async executor</a></li><li class="chapter-item "><a href="../vision/status_quo/barbara_carefully_dismisses_embedded_future.html"><strong aria-hidden="true">2.5.21.</strong> Barbara carefully dismisses embedded Future</a></li><li class="chapter-item "><a href="../vision/status_quo/barbara_compares_some_cpp_code.html"><strong aria-hidden="true">2.5.22.</strong> Barbara compares some C++ code</a></li><li class="chapter-item "><a href="../vision/status_quo/barbara_gets_burned_by_select.html"><strong aria-hidden="true">2.5.23.</strong> Barbara gets burned by select</a></li><li class="chapter-item "><a href="../vision/status_quo/barbara_makes_their_first_steps_into_async.html"><strong aria-hidden="true">2.5.24.</strong> Barbara makes their first foray into async</a></li><li class="chapter-item "><a href="../vision/status_quo/barbara_needs_async_helpers.html"><strong aria-hidden="true">2.5.25.</strong> Barbara needs Async Helpers</a></li><li class="chapter-item "><a href="../vision/status_quo/barbara_plays_with_async.html"><strong aria-hidden="true">2.5.26.</strong> Barbara plays with async</a></li><li class="chapter-item "><a href="../vision/status_quo/barbara_tries_async_streams.html"><strong aria-hidden="true">2.5.27.</strong> Barbara tries async streams</a></li><li class="chapter-item "><a href="../vision/status_quo/barbara_tries_unix_socket.html"><strong aria-hidden="true">2.5.28.</strong> Barbara tries Unix socket</a></li><li class="chapter-item "><a href="../vision/status_quo/barbara_trims_a_stacktrace.html"><strong aria-hidden="true">2.5.29.</strong> Barbara trims a stacktrace</a></li><li class="chapter-item "><a href="../vision/status_quo/barbara_wants_async_insights.html"><strong aria-hidden="true">2.5.30.</strong> Barbara wants async insights</a></li><li class="chapter-item "><a href="../vision/status_quo/barbara_wants_to_use_ghostcell.html"><strong aria-hidden="true">2.5.31.</strong> Barbara wants to use GhostCell-like cell borrowing</a></li><li class="chapter-item "><a href="../vision/status_quo/barbara_writes_a_runtime_agnostic_lib.html"><strong aria-hidden="true">2.5.32.</strong> Barbara writes a runtime-agnostic library</a></li><li class="chapter-item "><a href="../vision/status_quo/grace_deploys_her_service.html"><strong aria-hidden="true">2.5.33.</strong> Grace deploys her service and hits obstacles</a></li><li class="chapter-item "><a href="../vision/status_quo/grace_tries_new_libraries.html"><strong aria-hidden="true">2.5.34.</strong> Grace tries new libraries</a></li><li class="chapter-item "><a href="../vision/status_quo/grace_waits_for_gdb_next.html"><strong aria-hidden="true">2.5.35.</strong> Grace waits for gdb next</a></li><li class="chapter-item "><a href="../vision/status_quo/grace_wants_to_integrate_c_api.html"><strong aria-hidden="true">2.5.36.</strong> Grace wants to integrate a C-API</a></li><li class="chapter-item "><a href="../vision/status_quo/grace_writes_a_new_fb_service.html"><strong aria-hidden="true">2.5.37.</strong> Grace writes a new Facebook service</a></li><li class="chapter-item "><a href="../vision/status_quo/niklaus_simulates_hydrodynamics.html"><strong aria-hidden="true">2.5.38.</strong> Niklaus builds a hydrodynamics simulator</a></li><li class="chapter-item "><a href="../vision/status_quo/niklaus_wants_to_share_knowledge.html"><strong aria-hidden="true">2.5.39.</strong> Niklaus wants to share knowledge</a></li></ol></li><li class="chapter-item "><a href="../vision/shiny_future.html"><strong aria-hidden="true">2.6.</strong> ✨ Shiny future</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../vision/shiny_future/template.html"><strong aria-hidden="true">2.6.1.</strong> Template</a></li><li class="chapter-item "><a href="../vision/shiny_future/alan_learns_async_on_his_own.html"><strong aria-hidden="true">2.6.2.</strong> Alan learns async on his own</a></li><li class="chapter-item "><a href="../vision/shiny_future/alans_trust_in_the_compiler_is_rewarded.html"><strong aria-hidden="true">2.6.3.</strong> Alan's trust in the compiler is rewarded</a></li><li class="chapter-item "><a href="../vision/shiny_future/alan_switches_runtimes.html"><strong aria-hidden="true">2.6.4.</strong> Alan switches runtimes</a></li><li class="chapter-item "><a href="../vision/shiny_future/barbara_appreciates_performance_tools.html"><strong aria-hidden="true">2.6.5.</strong> Barbara appreciates great performance analysis tools</a></li><li class="chapter-item "><a href="../vision/shiny_future/barbara_enjoys_an_async_sandwich.html"><strong aria-hidden="true">2.6.6.</strong> Barbara enjoys an async sandwich</a></li><li class="chapter-item "><a href="../vision/shiny_future/barbara_makes_a_wish.html"><strong aria-hidden="true">2.6.7.</strong> Barbara makes a wish</a></li><li class="chapter-item "><a href="../vision/shiny_future/barbara_wants_async_rw.html"><strong aria-hidden="true">2.6.8.</strong> Barbara wants async read write</a></li><li class="chapter-item "><a href="../vision/shiny_future/barbara_wants_async_tracing.html"><strong aria-hidden="true">2.6.9.</strong> Barbara wants async tracing</a></li></ol></li><li class="chapter-item expanded "><a href="../vision/harmonic.html" class="active"><strong aria-hidden="true">2.7.</strong> 🎼  Harmonic Synthesis</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../vision/harmonic/async_traits.html"><strong aria-hidden="true">2.7.1.</strong> Async traits are possible</a></li></ol></li><li class="chapter-item "><a href="../vision/roadmap.html"><strong aria-hidden="true">2.8.</strong> 📅 Roadmap for 2021</a></li></ol></li><li class="chapter-item "><a href="../triage.html"><strong aria-hidden="true">3.</strong> 🔍 Triage meetings</a></li><li class="chapter-item "><a href="../design_docs.html"><strong aria-hidden="true">4.</strong> 🔬 Design docs</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../design_docs/yield_safe.html"><strong aria-hidden="true">4.1.</strong> ⚠️ Yield-safe lint</a></li><li class="chapter-item "><a href="../design_docs/stream.html"><strong aria-hidden="true">4.2.</strong> ☔ Stream trait</a></li><li class="chapter-item "><a href="../design_docs/generator_syntax.html"><strong aria-hidden="true">4.3.</strong> ⚡ Generator syntax</a></li><li class="chapter-item "><a href="../design_docs/async_read_write.html"><strong aria-hidden="true">4.4.</strong> 📝 AsyncRead, AsyncWrite traits</a></li><li class="chapter-item "><a href="../design_docs/async_fn_in_traits.html"><strong aria-hidden="true">4.5.</strong> 🧬 Async fn in traits</a></li><li class="chapter-item "><a href="../design_docs/mutex.html"><strong aria-hidden="true">4.6.</strong> 🔒 Mutex (future-aware)</a></li><li class="chapter-item "><a href="../design_docs/channels.html"><strong aria-hidden="true">4.7.</strong> 📺 Async aware channels</a></li><li class="chapter-item "><a href="../design_docs/async_closures.html"><strong aria-hidden="true">4.8.</strong> 📦 Async closures</a></li><li class="chapter-item "><a href="../design_docs/join.html"><strong aria-hidden="true">4.9.</strong> 🤝 Join combinator</a></li><li class="chapter-item "><a href="../design_docs/select.html"><strong aria-hidden="true">4.10.</strong> 🤷‍♀️ Select combinator</a></li><li class="chapter-item "><a href="../design_docs/sink_trait.html"><strong aria-hidden="true">4.11.</strong> 🚰 Sink trait</a></li><li class="chapter-item "><a href="../design_docs/async_main.html"><strong aria-hidden="true">4.12.</strong> 🎇 Async main</a></li><li class="chapter-item "><a href="../design_docs/async_drop.html"><strong aria-hidden="true">4.13.</strong> 🗑️ Async drop</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../design_docs/async_lifecycle.html"><strong aria-hidden="true">4.13.1.</strong> ♻️ Async lifecycle</a></li></ol></li><li class="chapter-item "><a href="../design_docs/completion_based_futures.html"><strong aria-hidden="true">4.14.</strong> ⏳ Completion-based futures</a></li></ol></li><li class="chapter-item "><a href="../conversations.html"><strong aria-hidden="true">5.</strong> 💬 Conversations</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../conversations/2021-02-12-Twitter-Thread.html"><strong aria-hidden="true">5.1.</strong> 🐦 2021-02-12 Twitter thread</a></li></ol></li><li class="chapter-item "><a href="../acknowledgments.html"><strong aria-hidden="true">6.</strong> ❤️ Acknowledgments</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">wg-async-foundations</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/rust-lang/wg-async-foundations" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                        
+
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="-the-harmonic-synthesis"><a class="header" href="#-the-harmonic-synthesis">🎼 The Harmonic Synthesis</a></h1>
+<h2 id="key-goals-and-points"><a class="header" href="#key-goals-and-points">Key goals and points</a></h2>
+<p>By the time we reach our shiny future...</p>
+<ul>
+<li>Working in async Rust should feel &quot;analogous&quot; to sync Rust to the extent possible:
+<ul>
+<li>You should be able to write <code>async fn</code> anywhere you can write <code>fn</code> and things should generally work.</li>
+<li>You should be able to rely on destructors to cleanup </li>
+<li>There should be a combination of quality learning resources, compiler diagnostics, helpful lints, and runtime feedback that ensures that, when you do have a problem, you can quickly understand what went wrong and how to fix it (this should be true both when getting started and at intermediate levels).</li>
+</ul>
+</li>
+<li>The complexity that underpins (pun intended) async Rust should be largely hidden from view:
+<ul>
+<li>You should be able to do everything you want to do by writing <code>async fn</code>; implementing combinators and poll functions manually should not be necessary.</li>
+</ul>
+</li>
+<li>We should enable seamless interoperability both within the Rust ecosystem and across languages:
+<ul>
+<li>It should be easy to write libraries that work across different runtimes.</li>
+<li>Your async programs should be portable across different runtimes by default, enabling easy experimentation.</li>
+<li>You should be able to interoperate with native runtimes available on your platform and the async mechanisms from other languages.</li>
+</ul>
+</li>
+<li>You should not be <em>surprised</em> by the semantics of your program; we want async Rust to have that same &quot;if it compiles, it works as expected&quot; feeling that sync Rust gives you:
+<ul>
+<li>It should be easy to create parallel/concurrent tasks and create complex scheduling structures (&quot;at most 5 of these requests at a time, combined with 1 of those&quot;) that work reliably and run efficiently. These tasks should be able to access borrowed data using a scope-like mechanism.</li>
+<li>Cancellation should be both reliable (cancelling everything it makes sense to cancel) and unsurprising (not interrupting work in the middle).</li>
+<li>Combining libraries and utilities from crates.io should not result in surprising panics nor in surprising event loops running in the background.</li>
+</ul>
+</li>
+<li>We should help you to maintain and optimize your system over its lifecycle:
+<ul>
+<li>It should be easy to figure out where your program is spending its time and to identify common async performance footguns and hazards.</li>
+<li>It should be easy to writing testing harnesses to test your logic, simulate extreme networking events, and so forth.</li>
+</ul>
+</li>
+<li>The system should scale to all the niches and key use cases:
+<ul>
+<li>Enabling zero-copy and the efficient use of io-uring</li>
+<li>Enabling code that doesn't require thread-safety (e.g., worker per core) to avoid overhead from atomics</li>
+<li>Writing efficient servers and networking hardware</li>
+<li>Writing simpler servers and web frameworks</li>
+<li>Writing networking clients </li>
+<li>Writing GUIs and games</li>
+<li>Working on embedded platforms that do not have an operating system or standard library</li>
+<li>Working on web assembly (exactly what this means is a bit of an open question)</li>
+</ul>
+</li>
+</ul>
+<h2 id="some-specific-technical-challenges"><a class="header" href="#some-specific-technical-challenges">Some specific technical challenges</a></h2>
+<p>Achieving the previous points will not be easy! We think we have an outline of how to do it, but there are some key technical challenges to overcome.
+Most or all of these have seen a lot of prior discussion:</p>
+<ul>
+<li>Async fn in traits and especially enabling their use in <code>dyn Trait</code></li>
+<li>Async closures</li>
+<li>Defining standard traits for portability:
+<ul>
+<li>async read</li>
+<li>async write</li>
+<li>async iteration</li>
+<li>timers</li>
+<li>opening TCP, UDP ports, potentially other standard I/O primities</li>
+<li>spawning, spawn-blocking</li>
+</ul>
+</li>
+<li>Integrating standard traits for portability into libstd</li>
+<li>Defining and standardizing combinators for async iterators, futures</li>
+<li>How to be generic over sync vs async</li>
+<li>Defining some form of drop impl that will run asynchronously
+<ul>
+<li>There remains debate about whether this is desirable. We argue that it is, because otherwise async code will always feel distinct from <code>Drop</code> code.</li>
+</ul>
+</li>
+<li>Defining some way to create a scope that lets you spawn tasks which access borrowed data (poll to completion or &quot;unforgettable&quot; futures are a likely mechanism)</li>
+<li>Less error-prone alternatives to <code>FuturesUnordered</code>, generally encouraging the spawning of tasks (and scopes) for non-trivial computation that might time out</li>
+</ul>
+<h2 id="skill-tree"><a class="header" href="#skill-tree">Skill tree</a></h2>
+<p>What follows is a &quot;skill tree&quot; that describes the key points of the harmonic synthesis.
+Each of the &quot;key goals and points&quot; covered above appears in this skill tree.</p>
+<div id='skill-tree-0'></div>
+<script>
+                    if (!window.SKILL_TREES) window.SKILL_TREES = [];
+                    window.SKILL_TREES.push({id:'skill-tree-0', value:{"dot_text":"digraph g {\ngraph [ rankdir = \"TD\" ];\nnode [ fontsize=\"16\", shape = \"ellipse\" ];\nedge [ ];\n\"async-traits\" [\n  label = <<table>\n    <tr><td bgcolor=\"darkgoldenrod\" colspan=\"3\">Async traits are possible</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Possible to write async abstractions using traits</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Working with dyn-safety requires careful work</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▮▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Type alias impl Trait</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▮▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Generic associated types</td></tr>\n  </table>>\n  shape = \"none\"\n  margin = 0\n]\n\"async-fn-everywhere\" [\n  label = <<table>\n    <tr><td bgcolor=\"darkgoldenrod\" colspan=\"3\">Async fn everywhere</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Write async fn anywhere you can write fn</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Write async closures anywhere you can write sync closures</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Support for `dyn Trait` where `Trait` has async fn</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Async fn sugar in traits</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▯▯▯</td><td bgcolor=\"cornsilk\">🛑</td><td bgcolor=\"cornsilk\">Async closure support</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Boxable, recursive async fn</td></tr>\n  </table>>\n  shape = \"none\"\n  margin = 0\n]\n\"async-iter\" [\n  label = <<table>\n    <tr><td bgcolor=\"darkgoldenrod\" colspan=\"3\">Async iteration is awesome</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Use async iterators as easily as sync iterators</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Write async and sync iterators with equal ease</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▮▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">AsyncIterator trait</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▮▯▯</td><td bgcolor=\"cornsilk\">🛑</td><td bgcolor=\"cornsilk\">Common combinators on AsyncIterator</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▯▯▯</td><td bgcolor=\"cornsilk\">✍️</td><td bgcolor=\"cornsilk\">Generators (both sync and async)</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▯▯▯</td><td bgcolor=\"cornsilk\">🛑</td><td bgcolor=\"cornsilk\">Easy conversion of sync iter to async iter</td></tr>\n  </table>>\n  shape = \"none\"\n  margin = 0\n]\n\"async-read-and-write\" [\n  label = <<table>\n    <tr><td bgcolor=\"darkgoldenrod\" colspan=\"3\">Async read and write are a pleasure to use</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Easy to pass around interoperable readers and writers</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Easy to impl AsyncRead and AsyncWrite traits</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Easy to write adapters that wrap async read and async write</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▮▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">AsyncRead trait in std</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▮▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">AsyncWrite trait in std</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">TBD: some way to write poll fns easily</td></tr>\n  </table>>\n  shape = \"none\"\n  margin = 0\n]\n\"portability-is-possible\" [\n  label = <<table>\n    <tr><td bgcolor=\"darkgoldenrod\" colspan=\"3\">Portability across runtimes is possible</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Grab a library from crates.io and<br/>it works with your chosen runtime,<br/>as long as the author does a good job</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Possible to author libraries<br/>that can be used with many runtimes,<br/>but requires careful use of traits</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Create a new runtime and have existing<br/>(portable) libraries work with no modifications</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Trait for spawning tasks</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Trait for spawning blocking tasks</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Trait for timers</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Common utilities like select, join, mutexes</td></tr>\n  </table>>\n  shape = \"none\"\n  margin = 0\n]\n\"getting-started\" [\n  label = <<table>\n    <tr><td bgcolor=\"darkgoldenrod\" colspan=\"3\">Getting started in async Rust is a smooth experience</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Easy to find, quality resources for learning async Rust</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Use Tcp Streams and other constructs without baking in a specific runtime or implementation</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Use Tcp Streams without threading generics all throughout your code</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Compiler and error messages help you avoid common mistakes</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Design patterns are well known</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▮▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Improve async book structure</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Lint for blocking functions in an async context</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▮▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Lint holding things over an await that should not be held over an await</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▮▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Work on identifying common design patterns</td></tr>\n  </table>>\n  shape = \"none\"\n  margin = 0\n]\n\"resolving-problems\" [\n  label = <<table>\n    <tr><td bgcolor=\"darkgoldenrod\" colspan=\"3\">Resolving problems in running applications is easy</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Using a debugger with Rust basically works</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Find out what tasks your program currently has</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Show why tasks are blocked</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Detect common pitfalls and async hazards</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Better debuginfo</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Runtime Debugger interface</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Runtime bug detectors</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▮▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Improve async book structure</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▮▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Work on identifying common design patterns</td></tr>\n  </table>>\n  shape = \"none\"\n  margin = 0\n]\n\"performance-tooling\" [\n  label = <<table>\n    <tr><td bgcolor=\"darkgoldenrod\" colspan=\"3\">Me make Rust FAST</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Profiles of specific tasks (heap, memory, etc)</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Long-running sequential loops are easy to find and remedy</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Overall profiles</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Lint for functions that will take too long to execute</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Runtime warnings in debug mode</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Profiler-guided lints</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Combinators and hooks to make it easy to yield in long-running loops</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Highly optimized `spawn_blocking`</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Turbowish profiler support</td></tr>\n  </table>>\n  shape = \"none\"\n  margin = 0\n]\n\"async-raii\" [\n  label = <<table>\n    <tr><td bgcolor=\"darkgoldenrod\" colspan=\"3\">Easily manage async cleanup</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Add an async drop and be confident that it will be invoked without effort</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Reliably detect cases where sync drop might be used instead</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▯▯▯</td><td bgcolor=\"cornsilk\">🛑</td><td bgcolor=\"cornsilk\">Ability to write an async disposal method</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Lint for sync dropping when there's async drop</td></tr>\n  </table>>\n  shape = \"none\"\n  margin = 0\n]\n\"portability-across-send\" [\n  label = <<table>\n    <tr><td bgcolor=\"darkgoldenrod\" colspan=\"3\">Portability across Send</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">write code that can be Send or not-Send at zero-cost (e.g., use Rc vs Arc)</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▯▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">associated traits</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▯▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">module-level generics</td></tr>\n  </table>>\n  shape = \"none\"\n  margin = 0\n]\n\"ffcf\" [\n  label = <<table>\n    <tr><td bgcolor=\"darkgoldenrod\" colspan=\"3\">If it compiles, it works</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Bugs are generally logic bugs, not a result of surprising async mechanisms</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Easy to create parallelism operating on borrowed data</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">When tasks are no longer needed, they can be reliably canceled</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">It is easy to visualize your program's task structure</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Way to avoid tasks being dropped unexpectedly while they continue to execute</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▯▯▯</td><td bgcolor=\"cornsilk\">🛑</td><td bgcolor=\"cornsilk\">Mechanism for launching tasks within those scopes that can reference borrowed data</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Hierarchical structure for tasks with cancelation propagation</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Lint when potentially canceling 'futures not known to be cancel safe'</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▮▮▯▯▯</td><td bgcolor=\"cornsilk\">🛑</td><td bgcolor=\"cornsilk\">Integration into the visualization infrastructure and debug tools</td></tr>\n  </table>>\n  shape = \"none\"\n  margin = 0\n]\n\"zero-copy\" [\n  label = <<table>\n    <tr><td bgcolor=\"darkgoldenrod\" colspan=\"3\">Zero copy works beautifully</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">permit zero copy</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▯▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">TBD</td></tr>\n  </table>>\n  shape = \"none\"\n  margin = 0\n]\n\"testing\" [\n  label = <<table>\n    <tr><td bgcolor=\"darkgoldenrod\" colspan=\"3\">Testing your async code is easy</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">Testing async code does not require a lot of pre-planning</td></tr>\n    <tr><td bgcolor=\"darkgoldenrod1\" colspan=\"3\">You can easily test connection errors, delays, and other corner cases</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▯▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Ability to fire timers programmatically (mock time)</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▯▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">`run_until_stalled`</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▯▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Mock sockets and file objects?</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▯▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Inject errors or long delays</td></tr>\n    <tr><td bgcolor=\"cornsilk\">▯▯▯▯▯</td><td bgcolor=\"cornsilk\">✋</td><td bgcolor=\"cornsilk\">Inject fake objects for real ones without modifying your code</td></tr>\n  </table>>\n  shape = \"none\"\n  margin = 0\n]\n\"async-traits\" -> \"async-fn-everywhere\";\n\"async-fn-everywhere\" -> \"async-iter\";\n\"async-fn-everywhere\" -> \"async-read-and-write\";\n\"async-iter\" -> \"portability-is-possible\";\n\"async-read-and-write\" -> \"portability-is-possible\";\n\"portability-is-possible\" -> \"getting-started\";\n\"getting-started\" -> \"resolving-problems\";\n\"resolving-problems\" -> \"performance-tooling\";\n\"async-traits\" -> \"async-raii\";\n\"portability-is-possible\" -> \"portability-across-send\";\n\"async-raii\" -> \"ffcf\";\n\"getting-started\" -> \"ffcf\";\n\"ffcf\" -> \"zero-copy\";\n\"getting-started\" -> \"testing\";\n}\n","error":""}});
+                    </script>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../vision/shiny_future/barbara_wants_async_tracing.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../vision/harmonic/async_traits.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../vision/shiny_future/barbara_wants_async_tracing.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../vision/harmonic/async_traits.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        <script type="text/javascript" src="../mermaid.min.js"></script>
+        
+        <script type="text/javascript" src="../mermaid-init.js"></script>
+        
+        <script type="text/javascript" src="../viz.js"></script>
+        
+        <script type="text/javascript" src="../full.render.js"></script>
+        
+        <script type="text/javascript" src="../panzoom.min.js"></script>
+        
+        <script type="text/javascript" src="../skill-tree.js"></script>
+        
+
+        
+
+    </body>
+</html>
